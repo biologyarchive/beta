@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <mwc-button id="myButton" label="Click Me!" raised></mwc-button>
+
+    <!-- Material Web uses standard JavaScript modules. -->
+    <script type="module">
+
+      // Importing this module registers <mwc-button> as an element that you
+      // can use in this page.
+      //
+      // Note this import is a bare module specifier, so it must be converted
+      // to a path using a server such as Web Dev Server.
+      import '@material/mwc-button';
+
+      // Standard DOM APIs work with Web Components just like they do for
+      // built-in elements.
+      const button = document.querySelector('#myButton');
+      button.addEventListener('click', () => {
+        alert('You clicked!');
+      });
+    </script>
+</body>
+</html>
